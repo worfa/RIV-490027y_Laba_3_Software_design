@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -61,6 +63,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -80,6 +83,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button6 = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -89,6 +93,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label20);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
@@ -105,6 +110,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Потенциальное число ошибок";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(447, 373);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(0, 14);
+            this.label20.TabIndex = 9;
             // 
             // button1
             // 
@@ -198,6 +211,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.textBox11);
             this.tabPage2.Controls.Add(this.label11);
@@ -225,6 +239,14 @@
             this.tabPage2.Text = "Расчет Метода Холстеда";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(505, 364);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(0, 14);
+            this.label21.TabIndex = 25;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(266, 36);
@@ -233,6 +255,7 @@
             this.button2.TabIndex = 24;
             this.button2.Text = "Расчет";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox11
             // 
@@ -389,6 +412,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button6);
+            this.tabPage3.Controls.Add(this.label22);
             this.tabPage3.Controls.Add(this.textBox19);
             this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.button5);
@@ -413,6 +438,14 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Рейтинг программиста и число ошибок";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(446, 392);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(0, 14);
+            this.label22.TabIndex = 34;
             // 
             // textBox19
             // 
@@ -439,6 +472,7 @@
             this.button5.TabIndex = 31;
             this.button5.Text = "Расчет";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -448,6 +482,7 @@
             this.button4.TabIndex = 30;
             this.button4.Text = "Сброс";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox18
             // 
@@ -490,6 +525,7 @@
             this.button3.TabIndex = 25;
             this.button3.Text = "Добавить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox16
             // 
@@ -556,7 +592,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(11, 165);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(344, 150);
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.ShowEditingIcon = false;
+            this.dataGridView1.Size = new System.Drawing.Size(344, 221);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -579,6 +617,16 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(591, 78);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 35;
+            this.button6.Text = "Расчет";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
@@ -611,7 +659,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -654,6 +701,11 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button6;
     }
 }
 
